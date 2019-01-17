@@ -65,7 +65,6 @@ class MatrixBotAPI:
     def handle_invite(self, room_id, state):
         print("Got invite to room: " + str(room_id))
         print("Joining...")
-        print(state)
         room = self.client.join_room(room_id)
 
         # Add message callback for this room
@@ -76,11 +75,8 @@ class MatrixBotAPI:
 
     def send_message(self, message, room_id=None, room_alias=None):
         if not room_id:
-            print('No room id')
             if not room_alias:  # send to all rooms if no room specified
-                print('No room alias')
                 for room in self.rooms:
-                    print(room)
                     room.send_text(message)
                 return True
             else:  # no ID but we have alias, so get room_id from it
