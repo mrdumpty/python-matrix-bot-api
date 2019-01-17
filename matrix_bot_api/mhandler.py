@@ -3,7 +3,7 @@ Defines a Matrix bot message handler
 """
 
 
-class MHandler(object):
+class MHandler:
     # test_callback - function that takes a room and event and returns a boolean
     # indicating whether we should pass the message on to handle_callback
     #
