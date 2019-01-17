@@ -33,7 +33,7 @@ class MatrixBotAPI:
             self.rooms = []
             for room in self.client.rooms.values():
                 self.rooms.append(room)
-        print('Комнат: ', len(self.rooms))
+        print('Total rooms: ', len(self.rooms))
         # Store empty list of handlers
         self.handlers = []
 
